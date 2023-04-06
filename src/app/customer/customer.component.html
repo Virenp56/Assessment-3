@@ -1,0 +1,11 @@
+<div class="w-100">
+    <div>
+        <app-customer-list class="flex-xl-grow-1  w-100" [ngStyle]="showForm ? {'opacity':1} : {'opacity':0.2}"
+            (toggleFormEvent)="toggleForm($event)" [customerData]="customerData"
+            (deleteCustomerEvent)="deleteCutomer($event)"
+            (editCustomerEvent)="getSingleCutomer($event)"></app-customer-list>
+    </div>
+    <app-customer-form [ngClass]="showForm ? 'hidden' : 'show'" class="form" (closeFormEvent)="closeForm($event)"
+        (postDataEvent)="postData($event)" [customerData]="singleCustomerData"
+        (updateDataEvent)="updateCustomer($event)"></app-customer-form>
+</div>

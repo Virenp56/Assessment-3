@@ -1,0 +1,114 @@
+{
+  "customer": [
+    {
+      "name": "Viren",
+      "description": "dsfdsfnlkf pcojdsjdsjv sodpjdsofjsdpofjspfjdspojfdpsjdpsojfdsjfdsjfdjfkjdlkfdslksdlkdslkfjs",
+      "status": "inactive",
+      "rate": "56",
+      "balance": "-56",
+      "deposite": "5656",
+      "id": 1
+    },
+    {
+      "name": "dddd",
+      "description": "dcddd",
+      "status": "inactive",
+      "rate": "454",
+      "balance": "454",
+      "deposite": "454",
+      "id": 2
+    },
+    {
+      "name": "Viren",
+      "description": "dsfdsfnlkf pcojdsjdsjv sodpjdsofjsdpofjspfjdspojfdpsjdpsojfdsjfdsjfdjfkjdlkfdslksdlkdslkfjs",
+      "status": "inactive",
+      "rate": "56",
+      "balance": "56",
+      "deposite": "56",
+      "id": 3
+    },
+    {
+      "name": "dddd",
+      "description": "dcddd",
+      "status": "inactive",
+      "rate": "454",
+      "balance": "454",
+      "id": 4
+    },
+    {
+      "name": "fdgfdg",
+      "description": "rgrdg",
+      "status": "inactive",
+      "rate": "25",
+      "balance": "25",
+      "deposite": "25",
+      "id": 5
+    },
+    {
+      "name": "xvxcvcxxcvcxvcx",
+      "description": "RTHTR",
+      "status": "inactive",
+      "rate": "12",
+      "balance": "56",
+      "deposite": "12",
+      "id": 8
+    },
+    {
+      "name": "sfdd",
+      "description": "dsfdsfd",
+      "status": "error",
+      "rate": "25",
+      "balance": "25",
+      "deposite": "325",
+      "id": 9
+    },
+    {
+      "name": "bmbmnbmbm",
+      "description": "bnmbnmnbmnbmnb",
+      "status": "open",
+      "rate": 454545,
+      "balance": 54454,
+      "id": 10
+    },
+    {
+      "name": "Viren Patel",
+      "description": "ewrwe",
+      "status": "success",
+      "rate": 56,
+      "balance": 12,
+      "id": 11
+    },
+    {
+      "name": "Viren patel",
+      "description": "dsfdsfnlkf pcojdsjdsjv sodpjdsofjsdpofjspfjdspojfdpsjdpsojfdsjfdsjfdjfkjdlkfdslksdlkdslkfjs",
+      "status": "error",
+      "rate": 56,
+      "balance": 56,
+      "id": 12
+    },
+    {
+      "name": "sdfsdf",
+      "description": "sdfsd",
+      "status": "error",
+      "rate": 12,
+      "balance": 12,
+      "id": 13
+    },
+    {
+      "name": "THRTDH",
+      "description": "wedewd",
+      "status": "open",
+      "rate": 12,
+      "balance": 46546,
+      "id": 14
+    },
+    {
+      "name": "sdsdf",
+      "description": "sdfsd",
+      "status": "inactive",
+      "rate": 12,
+      "balance": 12,
+      "id": 15
+    }
+  ]
+}

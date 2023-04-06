@@ -1,0 +1,45 @@
+<div class="header d-flex justify-content-between">
+    <div class="header-left">
+        <ng-select [clearable]="false" class="status" [items]="status" bindLabel="name" bindValue="value"
+            [(ngModel)]="option"></ng-select>
+    </div>
+    <div class="header-right">
+        <input type="text" class="search" placeholder="Search Here" [(ngModel)]="searchText">
+
+        <button type="button" (click)="toggleForm()" class="add">Add</button>
+    </div>
+</div>
+<table class="table">
+    <thead class="thead">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">NAME</th>
+            <th scope="col">DESCRIPTION</th>
+            <th scope="col">STATUS</th>
+            <th scope="col">RATE</th>
+            <th scope="col">BALANCE</th>
+            <th scope="col">ACTION</th>
+        </tr>
+    </thead>
+    <tbody class="tbody">
+        <tr *ngFor="let item of customerData | filter : option | search : searchText   ">
+            <td class="id">{{item.id}}</td>
+            <td class="name">{{item.name}}</td>
+            <td class="description">{{item.description}}</td>
+            <td>
+                <span class="open" *ngIf="item.status=='open'">{{item.status}}</span>
+                <span class="inactive" *ngIf="item.status=='inactive'">{{item.status}}</span>
+                <span class="success" *ngIf="item.status=='success'">{{item.status}}</span>
+                <span class="error" *ngIf="item.status=='error'">{{item.status}}</span>
+            </td>
+            <td>${{item.rate}}.00</td>
+            <td><span class="red" *ngIf="item.balance<=0">-${{item.balance*(-1)}}.00</span>
+                <span class="green" *ngIf="item.balance>0">${{item.balance}}.00</span>
+            </td>
+            <td><button type="button" class="editBtn" (click)="editCutomer(item.id)"><img src="/assets/icons/icon.png"
+                        alt=""></button><button type="button" class="deleteBtn" (click)="deleteCutomer(item.id)"><img
+                        src="/assets/icons/delete.png" alt=""></button></td>
+        </tr>
+
+    </tbody>
+</table>

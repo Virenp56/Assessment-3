@@ -1,0 +1,72 @@
+<form class="form d-flex flex-column" [formGroup]="customerForm" (ngSubmit)="toggleFunction ? onSubmit() : onEdit()">
+    <div class="form-header">
+        <span>{{formTag}} CUSTOMER</span>
+    </div>
+    <div class="main-form">
+        <div class="mb-3">
+            <label for="name" class="form-label">NAME</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter Name" formControlName="name">
+            <div *ngIf="customerForm.get('name')?.invalid && (customerForm.get('name')?.dirty || customerForm.get('name')?.touched)"
+                class="alert">
+                <div *ngIf="customerForm.get('name')?.errors?.['required']">
+                    Name is required.
+                </div>
+                <div *ngIf="customerForm.get('name')?.errors?.['pattern']">
+                    Enter Valid Name.
+                </div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">DESCRIPTION</label>
+            <input type="text" class="form-control" id="description" placeholder="Enter Description"
+                formControlName="description">
+            <div *ngIf="customerForm.get('description')?.invalid && (customerForm.get('description')?.dirty || customerForm.get('description')?.touched)"
+                class="alert">
+                <div *ngIf="customerForm.get('description')?.errors?.['required']">
+                    Description is required.
+                </div>
+                <div *ngIf="customerForm.get('description')?.errors?.['pattern']">
+                    Enter Valid Description.
+                </div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="status" class="form-label">STATUS</label>
+            <ng-select [clearable]="false" [items]="status" bindLabel="name" bindValue="name" formControlName="status"
+                placeholder="Select Status"></ng-select>
+            <div *ngIf="customerForm.get('status')?.invalid && (customerForm.get('status')?.dirty || customerForm.get('status')?.touched)"
+                class="alert">
+                <div *ngIf="customerForm.get('status')?.errors?.['required']">
+                    Status is required.
+                </div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="rate" class="form-label">RATE</label>
+            <input type="number" class="form-control" id="rate" placeholder="Enter Rate" formControlName="rate">
+            <div *ngIf="customerForm.get('rate')?.invalid && (customerForm.get('rate')?.dirty || customerForm.get('rate')?.touched)"
+                class="alert">
+                <div *ngIf="customerForm.get('rate')?.errors?.['required']">
+                    Rate is required.
+                </div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="balance" class="form-label">BALANCE</label>
+            <input type="number" class="form-control" id="balance" placeholder="Enter Balance"
+                formControlName="balance">
+            <div *ngIf="customerForm.get('balance')?.invalid && (customerForm.get('balance')?.dirty || customerForm.get('balance')?.touched)"
+                class="alert">
+                <div *ngIf="customerForm.get('balance')?.errors?.['required']">
+                    Balance is required.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-footer d-flex justify-content-end">
+        <button type="submit" class="submitBtn" [disabled]="customerForm.invalid">{{btnText}}</button>
+        <button type="button" class="cancelBtn" (click)="closeForm()">Cancel</button>
+
+    </div>
+</form>
